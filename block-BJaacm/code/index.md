@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` //   true because newUser has a value of user 
+- `user === newUser;`// true because newUser has a value of user 
+- `user.name === newUser.name;`  // true because newUser has a value of user 
+- `user.name == newUser.name;`  // true because newUser has a value of user 
+- `user.sibling == newUser.sibling;`  // true because newUser has a value of user 
+- `user.sibling === newUser.sibling;`  // true because newUser has a value of user 
+- `user.sibling == allBrothers;` // false because user has a different address and allBrothers has a differrent address .
+- `user.sibling === allBrothers;` // false because user has a different address and allBrothers has a differrent address .
+- `brothersCopy === allBrothers;` // false because brothersCopy has the value of user.sibling andu user object points to a different address .
+- `brothersCopy == allBrothers;` // false because brothersCopy has the value of user.sibling andu user object points to a different address .
+- `brothersCopy == user.sibling;` // true because brothersCopy has the valuse of user.sibling 
+- `brothersCopy === user.sibling;` // true because brothersCopy has the valuse of user.sibling 
+- `brothersCopy[0] === user.sibling[0];`// true because brothersCopy has the valuse of user.sibling 
+- `brothersCopy[1] === user.sibling[1];`// true because brothersCopy has the valuse of user.sibling 
+- `user.sibling[1] === newUser.sibling[1];` //   true because newUser has a value of user 
