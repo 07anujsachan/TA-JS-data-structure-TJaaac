@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // arya
+console.log(person.firstName); // arya
+console.log(person.lastName); // doe
+console.log(person == person2); // true
+console.log(person === person2); // true
+console.log(person.lastName === person2.lastName); // true
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); //john
+console.log(person.firstName); // arya
+console.log(personTwo.lastName); // doe
+console.log(person.firstName === personTwo.firstName); // false
+console.log(person == personTwo); // false
+console.log(person === personTwo); // false
+console.log(person.address === personTwo.address); //true
+console.log(person.address == personTwo.address); // true
+console.log(personTwo.address.city); // navada
+console.log(person.address.city); // navada
+console.log(person.address.city == personTwo.address.city); // true
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // john
+console.log(person.firstName); // arya
+console.log(personTwo.lastName); // doe
+console.log(person.firstName === personTwo.firstName); // false
+console.log(person == personTwo); //  false
+console.log(person === personTwo); // false
+console.log(person.address === personTwo.address); // false 
+console.log(person.address == personTwo.address); // false 
+console.log(personTwo.address.city); // san jose 
+console.log(person.address.city); // navada
+console.log(person.address.city == personTwo.address.city); //  false 
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -103,8 +103,9 @@ let blogs = [
   },
 ];
 
-// Your code goes here
+let cloneBlogs =[...blogs]
 ```
+
 
 5. Clone the `question` variable into a new variable named `questionClone`
 
@@ -128,7 +129,7 @@ var questions = [
   },
 ];
 
-// Your code goes here
+let questionClone = [...questions]
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -155,7 +156,7 @@ var allBlogs = {
   ],
 };
 
-// Your code goes here
+let allBlogsClone = {...allBlogs, author:{...allBlogs.author},comments:[...allBlogs.comments]}
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -188,14 +189,14 @@ let person = [
   },
 ];
 
-// Your code goes here
+let clonedPerson = [...person ,output:{...person.output}]
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
-  // your code
+function cloneObject(object) {
+ return {...object}
 }
 
 // Run the test below to check your function
